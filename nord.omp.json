@@ -76,65 +76,6 @@
       "type": "prompt"
     },
     {
-      "alignment": "right",
-      "segments": [
-        {
-          "background": "#83769c",
-          "foreground": "#ECEFF4",
-          "invert_powerline": true,
-          "powerline_symbol": " \ue0b2",
-          "properties": {
-            "always_enabled": true
-          },
-          "style": "powerline",
-          "template": " {{ .FormattedMs }} ",
-          "type": "executiontime"
-        },
-        {
-          "background": "#ECEFF4",
-          "background_templates": [
-            "{{if eq \"Charging\" .State.String}}#D08770{{end}}",
-            "{{if eq \"Discharging\" .State.String}}#EBCB8B{{end}}",
-            "{{if eq \"Full\" .State.String}}#A3BE8C{{end}}"
-          ],
-          "foreground": "#2E3440",
-          "invert_powerline": true,
-          "powerline_symbol": "\ue0b2",
-          "properties": {
-            "charged_icon": "\uf583 ",
-            "charging_icon": "\uf588 ",
-            "discharging_icon": "\uf57d "
-          },
-          "style": "powerline",
-          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}% ",
-          "type": "battery"
-        },
-        {
-          "background": "#ECEFF4",
-          "foreground": "#2E3440",
-          "invert_powerline": true,
-          "powerline_symbol": "\ue0b2",
-          "style": "powerline",
-          "template": " \uf9c6 {{ .Icon }}{{ if ne .Status \"stopped\" }}{{ .Artist }} - {{ .Track }}{{ end }} ",
-          "type": "spotify"
-        },
-        {
-          "background": "#5E81AC",
-          "foreground": "#ECEFF4",
-          "invert_powerline": true,
-          "leading_diamond": "\ue0b2",
-          "properties": {
-            "time_format": "_2,15:04"
-          },
-          "style": "diamond",
-          "template": " \uf5ef {{ .CurrentDate | date .Format }}",
-          "trailing_diamond": "\ue0b4",
-          "type": "time"
-        }
-      ],
-      "type": "prompt"
-    },
-    {
       "alignment": "left",
       "newline": true,
       "segments": [
